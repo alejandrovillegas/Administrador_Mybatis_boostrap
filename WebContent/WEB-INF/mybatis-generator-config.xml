@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+ PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+ "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<classPathEntry
+		location="/home/netsac/administrator2/Estudiante/WebContent/WEB-INF/lib/mysql-connector-java-5.0.8-bin.jar" />
+
+	<context id="MyIbatis" targetRuntime="MyBatis3">
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost:3306/ROOKIE_CORE"
+			userId="root" password="pilli123">
+		</jdbcConnection>
+		
+		<javaModelGenerator targetPackage="model"
+			targetProject="Estudiante/src" />
+		<sqlMapGenerator targetPackage="map"
+			targetProject="Estudiante/src" />
+		<javaClientGenerator targetPackage="map"
+			targetProject="Estudiante/src" type="XMLMAPPER" />
+				
+		<table schema="ROOKIE_CORE" tableName="Estudiantes">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		
+	</context>
+</generatorConfiguration>
